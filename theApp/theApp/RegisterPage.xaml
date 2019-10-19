@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="theApp.RegisterPage"
+              NavigationPage.HasNavigationBar="False"   
+            
+             >
+        <ContentPage.Resources>
+            <ResourceDictionary>
+                <Color x:Key="TextColor">#B8B8B8</Color>
+                <Color x:Key="ThemeColor">#00000</Color>
+                <Color x:Key="PlaceHolder">#575556</Color>
+            </ResourceDictionary>
+        </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout x:Name="stackContents">
+            <StackLayout Orientation="Horizontal" Spacing="0"  BackgroundColor="#F95555">            
+            <Label Text="Register"
+                       FontSize="36"
+                       HorizontalOptions="FillAndExpand"
+                       BackgroundColor="#F95555"
+                       HorizontalTextAlignment="Center"
+                       TextColor="White"
+                   />
+                <ImageButton  BackgroundColor="#F95555" HorizontalOptions="Center"  Source="icons8_help.ico" x:Name="btnHelp" Clicked="BtnHelp_Clicked" VerticalOptions="EndAndExpand" />
+            </StackLayout>
+        <ScrollView>
+            <StackLayout Spacing="0" x:Name="stackBody">
+            <Picker Title="Prefix" WidthRequest="20" >
+                      <Picker.Items>
+                          <x:String>Mr</x:String>
+                          <x:String>Mrs</x:String>
+                          <x:String>Ms</x:String>
+                      </Picker.Items>
+                  </Picker>
+                   <Entry Placeholder="ID Number"   
+                   x:Name="enrtyID"       
+                          TextChanged="EnrtyID_TextChanged"
+                          
+                   />
+                    <Label TextColor="Red" FontSize="16" 
+                       Text="ID Number field is Empty"  
+                           x:Name="lblErID"
+                           IsVisible="false"
+                       />
+                
+                
+                    <Entry Placeholder="First Name"
+                    x:Name="entryFirstName"                    
+                   />
+                    <Label TextColor="Red" FontSize="16" 
+                       Text="First name field is Empty"
+                           x:Name="lblErFirstName"
+                           IsVisible="false"
+                       />
+                
+                
+                    <Entry Placeholder="Surname"
+                    x:Name="enrtySurname"                   
+                   />
+                    <Label TextColor="Red" FontSize="16" 
+                       Text="Surname field is Empty"
+                           x:Name="lblErSurname"
+                           IsVisible="false"
+                       />
+                
+                
+                
+                    <Entry Placeholder="Street Address"
+                   x:Name="enrtyStreetAddress"                   
+                   />
+                    <Label TextColor="Red" FontSize="16" 
+                       Text="Street address field is Empty"
+                           x:Name="lblErStrtAdrs"
+                           IsVisible="false"
+                       />
+                
+                
+                    <StackLayout Orientation="Horizontal">
+                            <Entry Placeholder="City" 
+                       x:Name="entryCity"
+                       WidthRequest="140"
+                      
+                       />
+                            <Entry Placeholder="Province"
+                       x:Name="entryProvince"
+                       WidthRequest="130"
+                      
+                       />
+                            <Entry Placeholder="Zip" 
+                       x:Name="entryZip"
+                       WidthRequest="60"
+                       
+                       />
+                        </StackLayout>
+                    <Label TextColor="Red" FontSize="16" 
+                       Text="Fill in all address fields"
+                           x:Name="lblErAdrs"
+                           IsVisible="false"
+                       />
+                
+                
+                    <Entry Placeholder="Username"
+                   x:Name="enrtyUsermame"       
+                   />
+                    <Label TextColor="Red" FontSize="16" 
+                       Text="Username field is Empty"
+                           x:Name="lblErUsername"
+                           IsVisible="false"
+                       />
+                
+                
+                    <Entry Placeholder="Password" 
+                   x:Name="enrtyPassword"
+                   IsPassword="True"
+            
+                   />
+                    <Label TextColor="Red" FontSize="16" 
+                       Text="Password field is Empty"
+                           x:Name="lblErPass"
+                           IsVisible="false"
+                       />
+                    <Entry Placeholder="Confirm Password" 
+                   x:Name="enrtyConfirmPass"
+                   IsPassword="True"           
+                   />
+                    <Label TextColor="Red" FontSize="16" 
+                       Text="Confirm field is Empty"
+                           IsVisible="false"
+                           x:Name="lblErConfrmPass"
+                       />
+
+
+
+                </StackLayout>
+        </ScrollView>
+            <StackLayout Orientation="Horizontal" VerticalOptions="End">
+                    <Button Text="Cancel"
+                            x:Name="btnCancel"
+                            HeightRequest="60"
+                            WidthRequest="150"
+                           BackgroundColor="#F95555"
+                           Margin="10,0,30,0"
+                            Clicked="BtnCancel_Clicked"
+                            CornerRadius="12"
+                            />
+                    <Button Text="Register"
+                            x:Name="btnRegister"
+                                HeightRequest="60"
+                                WidthRequest="150"
+                                BackgroundColor="#F95555"
+                                Margin="0,0,10,0"
+                            Clicked="BtnRegister_Clicked"
+                            CornerRadius="12"
+                            />
+            </StackLayout>
+        </StackLayout>
+       
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="theApp.ClientProfilePage"
+             NavigationPage.HasNavigationBar="False"
+             >
+    
+    
+    <ContentPage.Content>
+        <StackLayout x:Name="stackContents" >
+          
+            <StackLayout   Spacing="2" >
+                <!--for the controls-->
+                 <Image Source="profileHeader.jpg"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+                
+                <Grid HeightRequest="80" Margin="10,10,10,0" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="userImage"  Source="maleUser.png" Grid.Column="0" HorizontalOptions="FillAndExpand" />
+                    <Label x:Name="lblName" Margin="1,0,0,0"  Grid.Column="1" Grid.ColumnSpan="2" FontSize="Large"
+                            HorizontalOptions="StartAndExpand"
+                           VerticalOptions="Center"
+                           Text="Tanyaradzwa Chikopera" 
+                           TextColor="LightBlue"/>
+                </Grid>             
+                    
+                     <Label x:Name="lblEmail" FontSize="Medium"   Text="chikoperatnya@gmail.com"   HorizontalOptions="Start" BackgroundColor="Transparent" TextColor="LightBlue"/>
+                    <Label x:Name="lblDOB"   FontSize="Medium" Text="27/02/00"    HorizontalOptions="Start" BackgroundColor="Transparent" TextColor="LightBlue"/>
+                    <Label x:Name="lblAddress"  FontSize="Medium"    Text="11 Jameson Road Street"   HorizontalOptions="Start" BackgroundColor="Transparent" TextColor="LightBlue"/>
+            </StackLayout>
+        
+            <StackLayout VerticalOptions="End" Orientation="Horizontal" Margin="0,20,0,0" x:Name="stackButtons">
+                <Button Text="Update"
+                            x:Name="btnUpdate"
+                                HeightRequest="50"
+                                WidthRequest="100"
+                                BackgroundColor="#F95555"
+                                Margin="0,0,10,0"    
+                                HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="End"
+                            Clicked="BtnUpdate_Clicked"
+                             CornerRadius="12"
+                            />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="theApp.RequestPage"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Content>
+        <StackLayout x:Name="stackContents">
+            <ScrollView>
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal" Spacing="0" BackgroundColor="#F95555">
+
+                        <Label Text="Request"
+                           FontSize="36"
+                           HorizontalOptions="FillAndExpand"
+                           BackgroundColor="#F95555"
+                           HorizontalTextAlignment="Center"
+                           TextColor="White"
+                        />
+                        <ImageButton  BackgroundColor="#F95555" HorizontalOptions="Center" Source="icons8_help.ico" x:Name="btnHelp"  VerticalOptions="EndAndExpand" Clicked="BtnHelp_Clicked" />
+                    </StackLayout>
+
+                 
+                    <StackLayout Margin="20,0,0,0">
+                        <!-- For the margin -->
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Request Date:" VerticalOptions="Center"/>
+                            <DatePicker x:Name="datePicker" VerticalOptions="Center"  
+                            Margin="10,0,20,0"
+                            HeightRequest="40"
+                              HorizontalOptions="FillAndExpand"                   
+                            />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Start Time:   " VerticalOptions="Center"/>
+                            <TimePicker x:Name="timeStartPicker" 
+                            Margin="10,0,20,0"
+                            HeightRequest="40" 
+                                HorizontalOptions="FillAndExpand"
+                            />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="End Time:     " VerticalOptions="Center"/>
+                            <TimePicker x:Name="timeEndPicker" 
+                            Margin="10,0,20,0"
+                            HeightRequest="40"
+                                HorizontalOptions="FillAndExpand"
+                            />
+                        </StackLayout>
+                    </StackLayout>
+
+
+                    <Picker Title="Category"   x:Name="pickerCategory" Margin="10,0,20,0" FontSize="16"  SelectedIndexChanged="PickerCategory_SelectedIndexChanged">
+
+                        <Picker.Items>
+                            <x:String>Plumbing</x:String>
+                            <x:String>Carpentry</x:String>
+                            <x:String>Painting</x:String>
+                            <x:String>Gardening</x:String>
+                            <x:String>Cleaners</x:String>
+                            <x:String>Welding</x:String>
+                            <x:String>Domestic</x:String>
+                            <x:String>Electrical</x:String>
+                        </Picker.Items>
+
+                    </Picker>
+                    <Label Text="Please Select a category" 
+                       TextColor="Red" 
+                       x:Name="lblErCateory"
+                       Margin="20,0,0,0"
+                       IsVisible="False"
+                       />
+                    <Picker Title="Number Of Labourers"   x:Name="pickerNUmOfLabourers" Margin="10,0,20,0" FontSize="16" >
+
+                        <Picker.Items>
+                            <x:String>1</x:String>
+                            <x:String>2</x:String>
+                            <x:String>3</x:String>
+                            <x:String>3</x:String>
+                            <x:String>4</x:String>
+                            <x:String>5</x:String>
+                            <x:String>6</x:String>
+                            <x:String>7</x:String>
+                            <x:String>8</x:String>
+                            <x:String>9</x:String>
+                            <x:String>10</x:String>
+                        </Picker.Items>
+
+                    </Picker>
+                    <Label Text="Please select the number of labourers" 
+                       TextColor="Red" 
+                       x:Name="lblErNumOfLab"
+                       Margin="20,0,0,0"
+                       IsVisible="False"/>
+
+
+                    <Editor Placeholder="Job Specification" 
+                   x:Name="entryJobSpec"
+                        HeightRequest="80"
+                        Margin="10,0,20,0"             
+                  
+                   />
+                    <Label Text="Please fill in the job Specification" 
+                       TextColor="Red" 
+                       x:Name="lblErJobSpec"
+                       Margin="20,0,0,0"
+                       IsVisible="False"
+                       />
+
+
+
+                    <Entry Placeholder=" Location"
+                   x:Name="entryLocation"
+                       Margin="10,0,20,0"
+                   />
+                    <Label Text="Please Fill in the location" 
+                       TextColor="Red" 
+                       x:Name="lblErLocation"
+                       Margin="20,0,0,0"
+                       IsVisible="False"/>
+
+                    <StackLayout Orientation="Horizontal" Margin="10,0,20,0">
+                        <Label Text="Provide Transport"
+                           VerticalOptions="Center"
+                           FontSize="20"
+                     
+                           />
+                        <Switch IsToggled="false" 
+                        x:Name="isTraportProvided"
+                   
+                        
+                        />
+                    </StackLayout>
+
+                    <Label Text="R0.00"
+                   x:Name="lblCost"
+                      HorizontalOptions="CenterAndExpand"
+                       FontSize="30"
+                       Margin="10,20,10,0"
+                   TextColor="Accent"
+                   />
+
+                </StackLayout>
+
+            </ScrollView>
+            <StackLayout Orientation="Horizontal" Margin="10,20,20,2">
+                <Button Text="Cancel"
+                        x:Name="btnCancel"
+                        HeightRequest="65"
+                        WidthRequest="150"
+                       BackgroundColor="#F95555"
+                       Margin="10,0,20,0"
+                        Clicked="BtnCancel_Clicked"
+                        CornerRadius="12"
+                        />
+                <Button Text="Request"
+                        x:Name="btnRequest"
+                            HeightRequest="65"
+                            WidthRequest="150"
+                            BackgroundColor="#F95555"
+                            Margin="15,0,10,0"
+                        Clicked="BtnRequest_Clicked"  
+                        CornerRadius="12"
+                        />
+            </StackLayout>
+        </StackLayout>
+        
+    </ContentPage.Content>
+
+
+</ContentPage>

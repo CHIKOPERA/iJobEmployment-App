@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="theApp.Login"
+             BackgroundImageSource="LoginScreen.JPG"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout x:Name="stackContents" Margin="0,0,0,5">
+                <Grid RowSpacing="0" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="362"/>
+                        <RowDefinition Height="102"/>
+                        <!-- For spacing between the entry and the buttons-->
+                        <RowDefinition Height="22"/>
+                        <RowDefinition Height="64"/>
+                        <!-- For spacing between the buttons-->
+                        <RowDefinition Height="22"/>
+                        <RowDefinition Height="64"/>
+
+
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Spacing="0" Grid.Row="1" Margin="35,0,5,0"  HorizontalOptions="FillAndExpand">
+                        <!--Entries-->
+                        <Entry Placeholder="Username"
+                       x:Name="entryUsername"
+                       VerticalOptions="Start"
+                       Margin="0,5,35,0"
+                       TextColor="Black"
+                    />
+
+
+                        <Label x:Name="lblErUsername" TextColor="Red" IsVisible="True"/>
+
+                        <Entry Placeholder="Password"
+                       x:Name="entryPassword"
+                       VerticalOptions="End"
+                       Margin="0,5,35,0"
+                       IsPassword="True"
+                       TextColor="Black"
+                        
+                       />
+
+
+                        <Label x:Name="lblErPassword" TextColor="Red" IsVisible="True"/>
+
+                    </StackLayout>
+
+                    <Button Grid.Row="3" Margin="35,0,35,0"
+                    VerticalOptions="Fill"
+                        Text="LOGIN"
+                    x:Name="btnLogin"
+                        TextColor="White"
+                    BackgroundColor="#F95555"
+                    Clicked="BtnLogin_Clicked"
+                   CornerRadius="12"
+                    
+                    />
+                    <Button Grid.Row="5" 
+                        x:Name="btnRegister"
+                        Margin="35,0,35,0"
+                        Text="SignUP"
+                       TextColor="White"
+                        HorizontalOptions="Fill"
+                        BackgroundColor="#F95555"
+                        Clicked="BtnRegister_Clicked"
+                       CornerRadius="12"
+                        />
+
+                    <Button Text="Fogort Password"
+                        x:Name="btnForgotPassword"
+                        Grid.Row="6" 
+                        VerticalOptions="Start"
+                        HorizontalOptions="Center"
+                        TextColor="Blue"
+                        BackgroundColor="Transparent"
+                        Clicked="BtnForgotPassword_Clicked"
+                        />
+
+
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+       
+        
+
+    </ContentPage.Content>
+</ContentPage>

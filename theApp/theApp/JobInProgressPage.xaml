@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="theApp.JobInProgressPage"
+             NavigationPage.HasNavigationBar="False"
+             
+             >
+    <ContentPage.Content>
+        <StackLayout x:Name="stackContents">
+
+      
+            <StackLayout>
+                <Label Text=" Your job is in progress"
+                       FontSize="80"
+                       HorizontalOptions="Fill"
+                        VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       TextColor="#F95555"
+                       Margin="0,120,0,0"
+                   />
+                <Label Text=" Thank you for using iJob.."
+                       FontSize="20"
+                       HorizontalOptions="Fill"
+                        VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       TextColor="Accent"
+                   />
+                <Button Text="End Job"
+                            x:Name="btnEndJOb"
+                                HeightRequest="60"
+                                WidthRequest="150"
+                                BackgroundColor="#F95555"
+                                Margin="0,0,10,0"
+                                Clicked="BtnEndJOb_Clicked"
+                                CornerRadius="12"
+                            />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

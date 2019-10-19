@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="theApp.ViewReportPage"
+   xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+   xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup">
+
+       <!--https://www.youtube.com/watch?v=dOU0Qei3Qlk-->
+       <pages:PopupPage.Animation>
+           <animations:ScaleAnimation DurationIn="400"
+                              DurationOut="400"
+                              EasingIn="SinOut"
+                              EasingOut="SinIn"
+                              HasBackgroundAnimation="True"
+                              PositionIn="Center"
+                              PositionOut="Center"
+                              ScaleIn="1.2"
+                              ScaleOut="0.8"
+                              />
+    </pages:PopupPage.Animation>
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="White" HeightRequest="985" WidthRequest="430">
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="135" />
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0">
+                    <!-- for the image-->
+                    <StackLayout>
+                        <Label Text="Transaction Report"
+                       FontSize="20"
+                       HorizontalOptions="Fill"
+                       BackgroundColor="#F95555"
+                       HorizontalTextAlignment="Center"
+                       TextColor="White"
+                    />
+                    </StackLayout>
+                    <Image x:Name="iJobLogo" Source="iJobLogoWhite.png" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
+                </StackLayout>
+
+
+                <Grid Grid.Row="1" Margin="20,0,0,0">
+                    <!-- for the details-->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="95"/>
+                        <ColumnDefinition Width="330"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Date:" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Start" />
+                    <StackLayout Grid.Row="0" Grid.Column="1"  VerticalOptions="Center" HorizontalOptions="Start" >
+                        <Label x:Name="lblDate" Text="thhe date is" />
+                    </StackLayout>
+
+
+
+                    <Label Text="Category:" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Start"/>
+                    <Label x:Name="lblCategory" Text="Test txt" Grid.Row="1" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start" />
+
+
+
+                    <Label Text="Labourers:" FontAttributes="Bold" Grid.Row="2" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Start"/>
+                    <Label x:Name="lblLabs" Grid.Row="2" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"/>
+
+
+
+                    <Label Text="Job Specification:" FontAttributes="Bold" Grid.Row="3" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Start"/>
+                    <Label x:Name="lblJobSpec" Grid.Row="3" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"/>
+
+
+                    <Label Text="Address:" FontAttributes="Bold" Grid.Row="4" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Start"/>
+                    <Label x:Name="LblLocation" Grid.Row="4" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start" />
+
+
+                    <Label Text="Cost:" FontAttributes="Bold" Grid.Row="5" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Start"/>
+                    <Label x:Name="lblCOst" Grid.Row="5" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start" />
+
+
+                    <Label x:Name="lblAssigned" Text="Assigned by:" FontAttributes="Bold" Grid.Row="6" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Start"/>
+                    <Label x:Name="lblAssignedBy" Grid.Row="6" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start" />
+
+                    <StackLayout Grid.Row="7"  Grid.Column="0" Grid.ColumnSpan="2">
+                        <Label Text="Thank you for using iJob, Please visit again" HorizontalOptions="CenterAndExpand" TextColor="LightBlue"/>
+               
+                    </StackLayout>
+
+
+
+                </Grid>
+
+
+        </Grid>
+        </ScrollView>
+        <StackLayout>
+            <Button 
+                    Text="OK"
+                        x:Name="btnOkay"
+                            HeightRequest="60"
+                            WidthRequest="430"
+                            BackgroundColor="#F95555"
+                            Margin="10,2,10,10"      
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Clicked="BtnOkay_Clicked"
+                CornerRadius="12"
+                        />
+    </StackLayout>
+    </StackLayout>
+</pages:PopupPage>

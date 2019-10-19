@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="theApp.ReportsPage"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Content>
+
+        <StackLayout x:Name="stackContents">
+            <Label Text="Reports"
+                       FontSize="30"
+                       HorizontalOptions="Fill"
+                       BackgroundColor="#F95555"
+                       HorizontalTextAlignment="Center"
+                       TextColor="White"
+                    />
+            <StackLayout>
+                <ScrollView>
+                    <ListView x:Name="listViewReports" SelectionMode="Single"  >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell Text="{Binding Location}" 
+                                      Detail="{Binding Date}"
+                                     Tapped="TextCell_Tapped_1"
+                                      
+                                        
+                                      />
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </ScrollView>             
+            </StackLayout>
+  
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

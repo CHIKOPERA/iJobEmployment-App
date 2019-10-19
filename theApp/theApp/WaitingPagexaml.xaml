@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="theApp.WaitingPagexaml"
+                NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False"
+             >
+    <ContentPage.Content>
+        <Grid RowSpacing="0" BackgroundColor="White" x:Name="stackContents">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="186"/>
+                <RowDefinition Height="380"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Image Source="waitingimage.JPG" Grid.Row="0"
+                   HeightRequest="250"
+                   WidthRequest="430"
+                   BackgroundColor="#6ACBB8"
+                   />
+            <StackLayout Grid.Row="1" BackgroundColor="White" Margin="0,40,0,0">
+                <Label Text=""
+                       FontSize="85"
+                       x:Name="lblEstTime"
+                       HorizontalOptions="Center"
+                       TextColor="#868686"       
+                       />
+                <Label Text="Estimated waiting time..."
+                       HorizontalOptions="Center"
+                        TextColor="#868686"  
+                       
+                       />
+                <Label x:Name="lblStatus" Text="Job still to be assigned.." TextColor="Accent"
+                       HorizontalOptions="Center"/>
+
+            </StackLayout>
+
+
+            <StackLayout Grid.Row="2" Orientation="Horizontal" >
+                <Button Text="Cancel Job"
+                        x:Name="btnCancelJob"
+                        HeightRequest="30"
+                        WidthRequest="150"
+                       BackgroundColor="#F95555"
+                        Margin="20,0,0,0"
+                        Clicked="BtnCancelJob_Clicked"
+                        CornerRadius="12"
+                        />
+                <Button Text="Home"
+                        x:Name="btnGoHome"
+                            WidthRequest="150"
+                            BackgroundColor="#F95555"
+                        Margin="50,0,0,0"
+                     Clicked="BtnGoHome_Clicked"
+                        CornerRadius="12"
+                        />
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

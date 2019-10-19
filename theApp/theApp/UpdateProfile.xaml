@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
+            x:Class="theApp.UpdateProfile"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup">
+
+    <!--https://www.youtube.com/watch?v=dOU0Qei3Qlk-->
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation DurationIn="400"
+                                   DurationOut="400"
+                                   EasingIn="SinOut"
+                                   EasingOut="SinIn"
+                                   HasBackgroundAnimation="True"
+                                   PositionIn="Center"
+                                   PositionOut="Center"
+                                   ScaleIn="1.2"
+                                   ScaleOut="0.8"
+                                   />
+    </pages:PopupPage.Animation>
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="LightGray" >
+        <Label Text="Update Profile" FontSize="Small" HorizontalOptions="Center"/>
+        <StackLayout>
+            <Entry Placeholder="Street Address"
+                   x:Name="enrtyStreetAddress"                   
+                   />
+            <Label TextColor="Red" FontSize="16" 
+                       Text="Street address field is Empty"
+                           x:Name="lblErStrtAdrs"
+                           IsVisible="false"
+                       />
+
+
+            <StackLayout Orientation="Horizontal">
+                <Entry Placeholder="City" 
+                       x:Name="entryCity"
+                       WidthRequest="140"
+                      
+                       />
+                <Entry Placeholder="Province"
+                       x:Name="entryProvince"
+                       WidthRequest="130"
+                      
+                       />
+                <Entry Placeholder="Zip" 
+                       x:Name="entryZip"
+                       WidthRequest="60"
+                       
+                       />
+            </StackLayout>
+            <Label TextColor="Red" FontSize="16" 
+                       Text="Fill in all address fields"
+                           x:Name="lblErAdrs"
+                           IsVisible="false"
+                       />
+
+        </StackLayout>
+        <Button Text="Password"
+                FontSize="9"
+              x:Name="btnUpdatePassowd"
+                  HeightRequest="30"
+                  WidthRequest="70"
+                  BackgroundColor="#F95555"
+                  Margin="0,0,10,0"
+                HorizontalOptions="CenterAndExpand"
+                Clicked="BtnUpdatePassowd_Clicked"
+             />
+        <StackLayout x:Name="stackPassword" IsVisible="False">
+            <!--Password-->
+            <Entry Placeholder="Old Password" 
+                   x:Name="enrtyOldPassword"
+                   IsPassword="True"
+            
+                   />
+            <Label TextColor="Red" FontSize="16" 
+                       Text="Password field is Empty"
+                           x:Name="lblErOldPass"
+                           IsVisible="false"
+                       />
+            <Entry Placeholder="New Password" 
+                   x:Name="enrtyNewPass"
+                   IsPassword="True"           
+                   />
+            <Label TextColor="Red" FontSize="16" 
+                       Text="Confirm field is Empty"
+                           IsVisible="false"
+                           x:Name="lblErNewPass"
+                       />
+            <Entry Placeholder="Confirm Password" 
+                   x:Name="enrtyConfirmPass"
+                   IsPassword="True"           
+                   />
+            <Label TextColor="Red" FontSize="16" 
+                       Text="Confirm field is Empty"
+                           IsVisible="false"
+                           x:Name="lblErConfirmPass"
+                       />
+        </StackLayout>
+        <Button Text="Update"
+              x:Name="btnUpdate"
+                  HeightRequest="60"
+                  WidthRequest="150"
+                  BackgroundColor="#F95555"
+                  Margin="0,0,10,0"
+                HorizontalOptions="CenterAndExpand"
+                Clicked="BtnUpdate_Clicked"
+             />
+    </StackLayout>
+</pages:PopupPage>
+
+

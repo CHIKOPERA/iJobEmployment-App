@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="theApp.DriverHomePage"
+             BackgroundImageSource="DriverPic.jpg"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Content>
+   
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="460"/>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Row="1"  >
+                        <Label Text="Awaiting Notification..."
+                           FontSize="30"
+                           HorizontalOptions="Center"
+                           VerticalOptions="StartAndExpand"
+                           FontFamily="Century"
+                           />
+                    <Label Text="..."
+                           FontSize="22"
+                           HorizontalOptions="Center"
+                           VerticalOptions="StartAndExpand"
+                           FontFamily="Century"
+                            
+                           >
+                        <Label.GestureRecognizers>
+                            <ClickGestureRecognizer Clicked="ClickGestureRecognizer_Clicked"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+                </Grid>
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

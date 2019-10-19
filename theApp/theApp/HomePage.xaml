@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="theApp.HomePage"
+              NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Content >
+
+        <Grid RowSpacing="0" Padding="0,0,0,12" x:Name="stackContents">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="230" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" BackgroundColor="#71B8B4" Orientation="Horizontal">
+                <!--Top menu-->
+                <ImageButton HorizontalOptions="EndAndExpand" Source="icons8_help.ico" x:Name="btnHelp2" Clicked="BtnHelp2_Clicked" />
+
+            </StackLayout>
+            <StackLayout Grid.Row="1" BackgroundColor="#71B8B4">
+                <!--Image-->
+                <Image Source="HomePic.jpg" 
+                       BackgroundColor="#71B8B4"
+                       HeightRequest="230"
+                       WidthRequest="260"
+                       Margin="29,0,0,0"
+                       
+                       />
+
+            </StackLayout>
+            <StackLayout Grid.Row="2" >
+                <!--Playground-->
+             
+            </StackLayout>
+            <StackLayout Grid.Row="3"  >
+                <!--The bottom butttos-->
+                <Grid VerticalOptions="FillAndExpand"  Margin="0,0,0,10" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Grid.Column="1" Spacing="2">
+                        <ImageButton Source="profileicon.png" 
+                                 x:Name="btnProfile"
+                                Clicked="BtnProfile_Clicked"
+                                 BackgroundColor="Transparent"
+                                       HeightRequest="35"
+                                     WidthRequest="35"
+                                 />
+                        <Label Text="Profile" BackgroundColor="Transparent" TextColor="#F95555" HorizontalTextAlignment="Center" VerticalOptions="End" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Column="2" Spacing="2">
+                        <ImageButton Source="addicon.png" 
+                                 x:Name="btnAddRequest"
+                                 Clicked="BtnAddRequest_Clicked"
+                                 BackgroundColor="Transparent"
+                                       HeightRequest="35"
+                                     WidthRequest="35"
+                                 />
+                        <Label Text="Request " BackgroundColor="Transparent" TextColor="#F95555" HorizontalTextAlignment="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Column="4" Spacing="2">
+                        <ImageButton Source="helpimage.ico" 
+                                 x:Name="btnHelp"
+                                 BackgroundColor="Transparent"
+                                 Clicked="BtnHelp_Clicked"
+                                       HeightRequest="35"
+                                     WidthRequest="35"
+                                 />
+                        <Label Text="Help " BackgroundColor="Transparent" TextColor="#F95555" HorizontalTextAlignment="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Column="3" Spacing="2">
+                        <ImageButton Source="reportPage.ico" 
+                                 x:Name="btnReport"
+                                 BackgroundColor="Transparent"
+                                 Clicked="BtnReport_Clicked"
+                                       HeightRequest="35"
+                                     WidthRequest="35"
+                                 />
+                        <Label Text="Reports " BackgroundColor="Transparent" TextColor="#F95555" HorizontalTextAlignment="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Column="0" Spacing="2">
+                        <ImageButton Source="commenticon.png"  
+                                 x:Name="btnCommenr"
+                                 Clicked="BtnCommenr_Clicked"
+                                 BackgroundColor="Transparent"
+                                     HeightRequest="35"
+                                     WidthRequest="35"
+                                 />
+                        <Label Text="Feedback " BackgroundColor="Transparent" TextColor="#F95555" HorizontalTextAlignment="Center" VerticalOptions="End"/>
+                    </StackLayout>
+                
+                  
+                    
+                  
+                 
+                </Grid>
+            </StackLayout>
+            
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

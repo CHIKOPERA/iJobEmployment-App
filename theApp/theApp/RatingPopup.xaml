@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="theApp.RatingPopup"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup">
+    
+    <!--https://www.youtube.com/watch?v=dOU0Qei3Qlk-->
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation DurationIn="400"
+                                   DurationOut="400"
+                                   EasingIn="SinOut"
+                                   EasingOut="SinIn"
+                                   HasBackgroundAnimation="True"
+                                   PositionIn="Center"
+                                   PositionOut="Center"
+                                   ScaleIn="1.2"
+                                   ScaleOut="0.8"
+                                   />
+    </pages:PopupPage.Animation>
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="White" HeightRequest="140" WidthRequest="290">
+        <Grid VerticalOptions="Center" HorizontalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Label Text="Rate Job" Grid.Row="0"  FontSize="16" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <!--Grid for the middle row with the feedabck buttons-->
+            <Grid Grid.Row="1" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+
+                <ImageButton Grid.Column="0" StyleId="1" x:Name="btn1" BackgroundColor="Gray"  
+                               VerticalOptions="Fill"
+                             Clicked="Btn1_Clicked"
+                             />
+                <ImageButton Grid.Column="1" StyleId="2" x:Name="btn2" BackgroundColor="Gray"
+                             VerticalOptions="Fill"
+                             Clicked="Btn2_Clicked"
+                             />
+                <ImageButton Grid.Column="2" StyleId="3" x:Name="btn3" BackgroundColor="Gray"
+                          VerticalOptions="Fill"
+                              HeightRequest="50"
+                             WidthRequest="50"
+                             Clicked="Btn3_Clicked"
+                             />
+                <ImageButton Grid.Column="3" StyleId="4" x:Name="btn4" BackgroundColor="Gray"
+                          VerticalOptions="FillAndExpand"
+                              HeightRequest="50"
+                             WidthRequest="50"
+                             Clicked="Btn4_Clicked"
+                             />
+                <ImageButton Grid.Column="4" StyleId="5" x:Name="btn5"  BackgroundColor="Gray"
+                             VerticalOptions="FillAndExpand"
+                             HeightRequest="50"
+                             WidthRequest="50"
+                             Clicked="Btn5_Clicked"
+                             />
+
+            </Grid>
+            <!--Grid for the bottom action buttons buttons-->
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Column="4">
+                    <Button Text="Rate"  FontSize="10" TextColor="Blue"
+                            BackgroundColor="Transparent" 
+                            x:Name="btnRate"
+                            Clicked="BtnRate_Clicked"
+                            />
+                </StackLayout>
+                <StackLayout Grid.Column="3">
+                    <Button Text="No"  FontSize="10" TextColor="LightBlue" 
+                            BackgroundColor="Transparent"
+                            x:Name="btnCancel"
+                            Clicked="BtnCancel_Clicked"
+                            />
+
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </StackLayout>
+    </pages:PopupPage>

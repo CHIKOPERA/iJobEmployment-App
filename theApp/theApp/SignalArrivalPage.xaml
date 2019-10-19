@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="theApp.SignalArrivalPage"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Content>
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="600"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Image Source="mapPic.PNG" Grid.Row="0" 
+                   VerticalOptions="FillAndExpand"
+                   
+                   />
+            <Button x:Name="btnArrived"
+                    Grid.Row="1"
+                        Text="Arrived"
+                        VerticalOptions="End"
+                        HeightRequest="60"
+                        WidthRequest="150"
+                         BackgroundColor="#F95555"
+                       Clicked="BtnArrived_Clicked"
+                   
+                        />
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

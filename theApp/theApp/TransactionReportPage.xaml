@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="theApp.TransactionReportPage"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout x:Name="stackContents" >
+            <Label Text="Transaction Report"
+                       FontSize="20"
+                       HorizontalOptions="Fill"
+                       BackgroundColor="#F95555"
+                       HorizontalTextAlignment="Center"
+                       TextColor="White"
+                    />
+
+            <StackLayout  Margin="10,0,20,0">
+                <!--Content of the page -->
+                <StackLayout >
+                    <Grid VerticalOptions="FillAndExpand" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="220" />
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                        <Image Grid.Row="0" Source="iJobLogoWhite.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                    <Grid Grid.Row="1">
+                        <!-- Grid for the details after the logo-->
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="120"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Date" FontAttributes="Bold" Grid.Row="0" Grid.Column="0"/>
+                        <Label x:Name="lblDate" Text="12-12-2010" Grid.Row="0" Grid.Column="1"/>
+
+                        <Label Text="Job Category" FontAttributes="Bold" Grid.Row="1" Grid.Column="0"/>
+                        <Label Text="Plumbing" x:Name="lblCategory" Grid.Row="1" Grid.Column="1"/>
+
+                        <Label Text="Labourers" FontAttributes="Bold" Grid.Row="2" Grid.Column="0"/>
+                            <ListView x:Name="listViewLabouers" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" />
+                            <!--<Label x:Name="lblLabourers" Text="Tanyaradzwa Chikopera Jupiter Steve" />--> 
+
+                        <Label Text="Cost" Grid.Row="4" Grid.Column="0" FontAttributes="Bold"/>
+                        <Label Text=" R175.00" Grid.Row="4" Grid.Column="1" Font="26"/>
+
+                        <Label Text=" Assigned by Tanyaradzwa Chikopera" FontAttributes="Bold" Grid.Row="5" Grid.ColumnSpan="2"
+                               VerticalTextAlignment="Start"
+                               />
+
+                    </Grid>
+
+
+                </Grid>
+
+            </StackLayout>
+                
+            <StackLayout VerticalOptions="EndAndExpand" Margin="20,0,20,20"  >
+                    <!--Buttton/s-->
+                    <Button Text="HOME"
+                        x:Name="btnGoHome"
+                            HeightRequest="60"
+                            WidthRequest="150"
+                            BackgroundColor="#F95555"
+                            Margin="0,0,10,0" 
+                            Clicked="BtnGoHome_Clicked"
+                            CornerRadius="12"
+                    
+                        />
+                </StackLayout>
+            </StackLayout>
+            
+            
+            
+            
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

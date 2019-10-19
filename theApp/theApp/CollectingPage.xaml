@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:map="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+              xmlns:local="clr-namespace:theApp;assembly=theApp"
+
+
+             x:Class="theApp.CollectingPage"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Content>
+        <StackLayout x:Name="stackContents">
+            <Label Text="Agency location"
+                       FontSize="28"
+                       HorizontalOptions="Fill"
+                       BackgroundColor="#F95555"
+                       HorizontalTextAlignment="Center"
+                       TextColor="White"
+                    />
+            <StackLayout x:Name="stackMap" HeightRequest="500">
+
+                <!-- <map:Map x:Name="MyMap"                 
+                  WidthRequest="320"
+                  HeightRequest="200"                  
+                  IsShowingUser="true"
+                  MapType="Hybrid" />-->
+
+                <!-- <local:CustomMap x:Name="customMap" MapType="Street" />-->
+
+                <Label Text="Your labourer is available for pick up at 11 Jameson Street,Quigney" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+
+            </StackLayout>
+            
+            <StackLayout x:Name="StackButtons" Orientation="Horizontal" Margin="20,5,20,5" VerticalOptions="EndAndExpand">
+                
+                <!-- for the page controls-->
+                <Button x:Name="btGetLocation"
+                        Text="Go to Map"
+                        VerticalOptions="End"
+                        HeightRequest="60"
+                        WidthRequest="150"
+                         BackgroundColor="#F95555"
+                        Clicked="btGetLocation_Clicked"
+                        CornerRadius="12"
+                        />
+                <Button Text="Arrived" x:Name="btnArrived"
+                        Margin="10,0,0,0"
+                        HeightRequest="60"
+                        VerticalOptions="End"
+                        WidthRequest="150"
+                        BackgroundColor="#F95555"
+                        Clicked="BtnArrived_Clicked"
+                        CornerRadius="12"
+                        />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

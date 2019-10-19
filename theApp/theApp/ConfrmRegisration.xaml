@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="theApp.ConfrmRegisration">
+    
+    <ContentPage.Content>
+
+        <StackLayout x:Name="stackContents">
+            <Label Text="Confirm Details"
+                       FontSize="36"
+                       HorizontalOptions="Fill"
+                       BackgroundColor="#F95555"
+                       HorizontalTextAlignment="Center"
+                       TextColor="White"
+                    />
+            <StackLayout VerticalOptions="StartAndExpand" Margin="20,0,20,0">
+                <!-- for the page controls-->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                   
+                     
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Text=" Id Number:" />
+                    <Label Grid.Row="0" Grid.Column="1" x:Name="lblID" FontSize="20" Text="" />
+                    <Label Grid.Row="1" Grid.Column="0" Text="Name:" />
+                    <Label Grid.Row="1" Grid.Column="1" x:Name="lblName" FontSize="20" Text="Tanyaradzwa Chikopera" />
+                    <Label Grid.Row="2" Grid.Column="0" Text="Date of Birth" />
+                    <Label Grid.Row="2" Grid.Column="1" x:Name="lblDOB" FontSize="20" Text="2017-02-25" />
+                    <Label Grid.Row="3" Grid.Column="0" Text="Gender:" />
+                    <Label Grid.Row="3" Grid.Column="1" x:Name="lblGender" FontSize="20" Text="Male" />
+                    <Label Grid.Row="4" Grid.Column="0" Text="Address:" />
+                    <Label Grid.Row="4" Grid.Column="1" x:Name="lblAddress" FontSize="20" Text="11 Jameson Road,Quigney,East london,Earsten Cape,5241" />
+                    <Label Grid.Row="5" Grid.Column="0" Text="Email:" />
+                    <Label Grid.Row="5" Grid.Column="1" x:Name="lblEmail" FontSize="20" Text="chikoperatanya@gmail.com" />
+                 </Grid>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="End" Margin="20,0,20,20">
+                <Button Text="Cancel"
+                        x:Name="btnCancel"
+                        HeightRequest="60"
+                        WidthRequest="150"
+                       BackgroundColor="#F95555"
+                       Margin="10,0,30,0"
+                     Clicked="BtnCancel_Clicked"
+                        CornerRadius="12"
+                        />
+                <Button Text="Confirm"
+                        x:Name="btnConfirm"
+                            HeightRequest="60"
+                            WidthRequest="150"
+                            BackgroundColor="#F95555"
+                            Margin="0,0,10,0"      
+                    Clicked="BtnConfirm_Clicked"
+                        CornerRadius="12"
+                        />
+            </StackLayout>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="theApp.SplashPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="SplashBackground.PNG"
+             >
+    <ContentPage.Content>
+        <StackLayout   >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0">
+                    <!--for the image-->
+
+
+                    <BoxView HorizontalOptions="FillAndExpand"></BoxView>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Margin="0,50,0,10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="Welcome to iJob" Grid.Row="1" VerticalOptions="Start" HorizontalOptions="Center" BackgroundColor="#79C7B9" TextColor="White" FontFamily="Century" FontSize="Medium" />
+
+                        <Label Text="Login As" Grid.Row="3"  VerticalOptions="End" HorizontalOptions="Center" BackgroundColor="#79C7B9" TextColor="White" />
+                        <Button x:Name="btnDriver" Grid.Row="4"  Clicked="BtnDriver_Clicked" Text="Driver" VerticalOptions="End" TextColor="White" HorizontalOptions="Center" HeightRequest="40" WidthRequest="150" CornerRadius="12" BackgroundColor="#8ACEC2"/>
+                        <Button x:Name="Client"  Grid.Row="5"  Clicked="Client_Clicked" Text="Client" VerticalOptions="End" TextColor="White" HorizontalOptions="Center" HeightRequest="40" WidthRequest="150" CornerRadius="12" BackgroundColor="#8ACEC2"/>
+
+                    </Grid>
+                    <!--Log in as-->
+                       </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
